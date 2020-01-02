@@ -1,0 +1,14 @@
+{
+  "name": "kisa-metaka",
+  "version": "1.0.1",
+  "description": "ima li ko jaci ima li ko jaci s ovakvim modelima ne isplati se kacit",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "neki tvrdi likovi",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}

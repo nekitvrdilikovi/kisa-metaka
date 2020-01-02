@@ -1,0 +1,16 @@
+{
+  "name": "example-online-files",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "kisa-metaka": "^1.0.1"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "author": "neki-tvrdi-likovi",
+  "license": "ISC"
+}

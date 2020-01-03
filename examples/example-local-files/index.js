@@ -1,4 +1,4 @@
-import { initialize } from "kisa-metaka";
+import { initialize } from "../../src/index";
 
 (function() {
   const config = {

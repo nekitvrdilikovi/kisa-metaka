@@ -3,19 +3,36 @@ export default class KeyBoardBuffer {
     this.clear();
   }
   store(key) {
-    this.buffer[this.head] = key;
-    this.head = (this.head + 1) % this.buffer.length;
+    if (this.length == 2) {
+      this.head = this.head.next;
+      this.length--;
+    }
+    const entry = { key };
+
+    if (!this.head) {
+      this.head = entry;
+      this.length++;
+      return;
+    }
+    this.head.next = entry;
+    this.length++;
   }
+
   pressed() {
-    return this.buffer.reduce(
-      (accumulator, current) => accumulator.concat(current),
-      ""
-    );
+    const constructPattern = current => {
+      if (!current) return "";
+      return current.key + constructPattern(current.next);
+    };
+
+    if (!this.head) return "";
+    return constructPattern(this.head);
   }
+
   clear() {
-    this.buffer = [undefined, undefined];
-    this.head = 0;
+    this.head = undefined;
+    this.length = 0;
   }
+
   triggered(pattern) {
     const pressed = this.pressed();
     const reversedPattern = pattern

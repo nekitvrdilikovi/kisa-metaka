@@ -9,7 +9,7 @@
     "start": "parcel index.html"
   },
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^2.8.2"
   },
   "author": "neki-tvrdi-likovi",
   "license": "ISC"
